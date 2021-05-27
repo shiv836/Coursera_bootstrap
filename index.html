@@ -7,14 +7,14 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
-   
+    <!--build:css css/main.css-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Ristorante Con Fusion</title>
 </head>
-
+   <!-- endbuild -->
 <body>
   <nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
       <div class="container">
@@ -27,12 +27,10 @@
               <li class="nav-item active"><a href="./index.html" class="nav-link"><span class="fa fa-home fa-lg"></span> Home</a></li>
               <li class="nav-item"><a href="./aboutus.html" class="nav-link"> <span class="fa fa-info fa-lg"></span> About</a></li>
               <li class="nav-item"><a href="#" class="nav-link"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-              <li class="nav-item"><a href="#" class="nav-link"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+              <li class="nav-item"><a href="./contactus.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
           </ul>
           <span class="navbar-text">
-              <a data-toggle="modal" data-target="#loginModal">
-                  <span class="fa fa-sign-in"></span>Login
-              </a>
+            <a id="loginButton" role="button"><span class="fa fa-sign-in"></span> Login</a>
           </span>
         </div>
       </div>
@@ -87,8 +85,10 @@
                 </div>
                 <div class="row align-items-center " style="margin: 10px;">
                 <div class="col-12 col-sm ">
-                    <a data-toggle="modal" data-target="#reserveModal" role="button" class="btn btn-block btn-warning">
-                        Reseve table</a>
+                    
+                <a type="button" class="btn btn-warning btn-sm btn-block" role="button" id="reserveButton" title="Or Call us at +852 12345678">Reserve a Table</a>
+                    <!-- <a data-toggle="modal" data-target="#reserveModal" role="button" class="btn btn-block btn-warning">
+                        Reseve table</a> -->
                 </div>
             </div>
             </div>
@@ -216,14 +216,12 @@
                     <a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
-                    <div class="btn-group" id="carouselButton">
-                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+            
+                        
+                        <button class="btn btn-danger btn-sm" id="carouselButton">
                             <span class="fa fa-pause"></span>
                         </button>
-                        <button class="btn btn-danger btn-sm" id="carousel-play">
-                            <span class="fa fa-play"></span>
-                        </button>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -379,22 +377,12 @@
            </div>
         </div>
     </footer>
+    <!--build:js js/main.js-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-   <script>
-       $(document).ready(function()
-       {
-           $('#mycarousel').carousel({interval:2000})
-           $('#carousel-pause').click(function(){
-                $('#mycarousel').carousel('pause');
-           });
-           $('#carousel-play').click(function(){
-                $('#mycarousel').carousel('cycle');
-           });
-       });
-   </script>
+    <script src="/jss/script.js"></script>
+    <!--endbuild-->
     
 </body>
 
